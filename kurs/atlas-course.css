@@ -1,0 +1,92 @@
+:root{
+  --atlas-navy:#16324f;
+  --atlas-navy-2:#0f2740;
+  --atlas-gold:#f2c94c;
+  --atlas-cream:#fbf8ef;
+  --atlas-white:#fff;
+}
+.atlas-course-tools{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:2147483000;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px;
+  border-radius:999px;
+  background:rgba(15,39,64,.96);
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  font-family:Lato,Arial,sans-serif;
+  color:#fff;
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+}
+.atlas-course-back,
+.atlas-course-script button{
+  border:0;
+  border-radius:999px;
+  min-height:36px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font:700 13px/1 Lato,Arial,sans-serif;
+  text-decoration:none;
+  cursor:pointer;
+}
+.atlas-course-back{
+  padding:0 13px;
+  background:var(--atlas-gold);
+  color:var(--atlas-navy-2);
+}
+.atlas-course-back:hover{filter:brightness(1.04)}
+.atlas-course-script{
+  display:flex;
+  gap:3px;
+  padding:3px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+}
+.atlas-course-script button{
+  min-width:38px;
+  padding:0 9px;
+  color:#fff;
+  background:transparent;
+}
+.atlas-course-script button[aria-pressed="true"]{
+  background:#fff;
+  color:var(--atlas-navy-2);
+}
+@media (max-width:640px){
+  .atlas-course-tools{
+    right:8px;
+    bottom:8px;
+    gap:5px;
+    padding:6px;
+  }
+  .atlas-course-back{padding:0 10px; max-width:44vw; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .atlas-course-script button{min-width:34px;padding:0 7px}
+}
+@media print{.atlas-course-tools{display:none!important}}
+
+/* Završno mobilno doterivanje integracije kursa */
+.atlas-course-tools{
+  max-width:calc(100vw - 24px);
+  box-sizing:border-box;
+  right:max(12px, env(safe-area-inset-right));
+  bottom:max(12px, env(safe-area-inset-bottom));
+}
+@media (max-width:520px){
+  .atlas-course-tools{
+    right:max(8px, env(safe-area-inset-right));
+    bottom:max(8px, env(safe-area-inset-bottom));
+    padding:5px;
+    gap:4px;
+  }
+  .atlas-course-back{height:34px;padding:0 9px;font-size:12px;max-width:42vw}
+  .atlas-course-script button{height:34px;min-width:32px;padding:0 6px;font-size:12px}
+}
+@media (max-width:360px){
+  .atlas-course-back{max-width:38vw}
+  .atlas-course-script button{min-width:29px;padding:0 5px}
+}
