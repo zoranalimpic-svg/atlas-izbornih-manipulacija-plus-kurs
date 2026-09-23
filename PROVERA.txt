@@ -5,4 +5,4 @@ URL у sitemap.xml: 25
 Неисправне локалне везе: 0
 JavaScript провера: исправна
 Додато: favicon.svg, og-image.png, 404.html, robots.txt, sitemap.xml, SEO/Open Graph/Twitter метаподаци.
-GitHub Pages адреса: https://zoranalimpic-svg.github.io/atlas-izbornih-manipulacija/
+GitHub Pages адреса: https://atlasmanipulacija.rs/
